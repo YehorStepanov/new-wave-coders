@@ -201,6 +201,13 @@
     width: 84px;
     height: 36px;
   }
+  .menu-box,
+  .menu-mobile,
+  .menu-mobile svg {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none;
+  }
 }
 @media (min-width: 768px) {
   .header-container {
