@@ -1,0 +1,199 @@
+.team {
+  padding: 64px 0;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-neutral-darkest);
+  background-color: var(--color-drover-lightest);
+}
+
+.team-title {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--second-family);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.team-title-part {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.team-subtitle {
+  margin-bottom: 48px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 48px;
+}
+
+.team-card {
+  min-height: 404px;
+}
+
+.team-member-card {
+  display: none;
+}
+
+.team-card-img {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-card-img {
+  border-radius: 16px;
+}
+
+.team-card:hover .team-card-img {
+  transform: scale(1.02);
+}
+
+.team-card-text-wrap {
+  padding: 20px 0 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.team-card-title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.team-card-subtitle {
+  margin-bottom: 12px;
+}
+
+.team-card-desc {
+  margin-bottom: 20px;
+}
+
+.team-card-socials-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.team-card-socials-item {
+  width: 24px;
+  height: 24px;
+}
+
+.team-card-socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-card-socials-icon {
+  fill: var(--color-neutral-darkest);
+}
+
+.team-card-socials-link:hover,
+.team-card-socials-link:focus {
+  background-color: var(--color-hawkes-blue);
+  border-radius: 10%;
+}
+
+@media screen and (min-width: 768px) {
+  .team {
+    padding: 40px 0 0;
+  }
+
+  .team-title {
+    margin-bottom: 24px;
+    gap: 16px;
+    font-size: 52px;
+  }
+
+  .team-subtitle {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  .team-cards {
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .team-card {
+    width: calc((100% - 24px) / 2);
+    min-height: 630px;
+  }
+
+  .team-hiring-card {
+    display: none;
+  }
+
+  .team-member-card {
+    display: block;
+  }
+
+  .team-card-img {
+    width: 340px;
+    height: auto;
+  }
+
+  .team-card-text-wrap {
+    padding: 24px 0 5px;
+  }
+
+  .team-card-title {
+    font-size: 22px;
+  }
+
+  .team-card-subtitle {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+
+  .team-card-desc {
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1336px) {
+  .team {
+    padding: 112px 0;
+  }
+
+  .team-cards {
+    gap: 64px 24px;
+  }
+
+  .team-card {
+    width: calc((100% - 48px) / 3);
+    min-height: 602px;
+    max-height: 614.59px;
+  }
+
+  .team-card-img {
+    width: 421px;
+  }
+
+  .team-card-text-wrap {
+    padding: 24px 0 0;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .team-container {
+    min-width: 100%;
+  }
+}
