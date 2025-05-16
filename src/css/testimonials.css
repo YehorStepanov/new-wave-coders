@@ -70,3 +70,47 @@
   line-height: 1.5;
   color: #0d0b0a;
 }
+
+@media screen and (min-width: 768px) {
+  .testimonials-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .testimonials-title {
+    margin-bottom: 24px;
+  }
+
+  .testimonials-list-parts:nth-child(1) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .testimonials-list-parts:nth-child(2) .testimonials-list-text {
+    margin-bottom: 102px;
+  }
+
+  .testimonials-list-parts:nth-child(3) .testimonials-list-text {
+    margin-bottom: 67px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .testimonials-section {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  .testimonials-list-parts:nth-child(1) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .testimonials-list-parts {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .testimonials-list {
+    gap: 24px;
+  }
+}
