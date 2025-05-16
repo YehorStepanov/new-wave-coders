@@ -427,7 +427,9 @@
   }
 
   .logo {
-    margin-left: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
     width: 84px;
     height: 36px;
     justify-content: flex-start;
