@@ -1,0 +1,70 @@
+.gallery {
+  padding: 64px 0;
+  background-color: #f2fafa;
+}
+
+.gallery-title {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 20px;
+}
+.galerry-paragraph {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 48px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery-img {
+  border-radius: 16px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding: 40px 0;
+  }
+  .gallery-title {
+    margin-bottom: 24px;
+  }
+  .gallery-paragraph {
+    margin-bottom: 80px;
+  }
+  .gallery-list li {
+    width: calc((100% - 24px) / 2);
+  }
+  .gallery-img {
+    width: 340px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1336px) {
+  .gallery {
+    padding: 112px 0;
+  }
+  .gallery-title {
+    font-size: 52px;
+  }
+  .galerry-paragraph {
+    font-weight: 500;
+  }
+  .gallery-img {
+    width: 421px;
+  }
+  .gallery-list li {
+    width: calc((100% - 48px) / 3);
+  }
+}
