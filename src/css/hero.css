@@ -1,21 +1,40 @@
 .hero {
   background-color: #f2fafa;
-  padding: 0 16px 48px 16px;
+  padding-bottom: 48px;
+  position: relative;
 }
 
 .hero-image {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  display: block;
+  z-index: 0;
+}
+.hero-image img {
   width: 100%;
+  height: auto;
 }
 .hero-title {
+  font-family: 'Cabin', sans-serif;
   font-weight: 400;
   font-size: 44px;
   line-height: 1.2;
   letter-spacing: 0.01em;
   color: #0d0b0a;
   text-align: left;
+  margin-top: 48px;
   margin-bottom: 20px;
 }
+.title-part-two {
+  display: none;
+}
 .hero-paragraph {
+  font-family: 'Sarabun', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
@@ -23,9 +42,11 @@
   margin-bottom: 24px;
 }
 .hero-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
 }
-.hero-item {
-}
+
 .join-btn {
   display: flex;
   border: 1px solid #c2d9fc;
@@ -39,7 +60,7 @@
   color: #0d0b0a;
   align-items: center;
   justify-content: center;
-  margin-bottom: 26px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .learn-btn {
   display: flex;
@@ -47,11 +68,81 @@
   border-radius: 100px;
   width: 329px;
   height: 46px;
-  background: rgba(13, 11, 10, 0.05);
+  background-color: rgba(13, 11, 10, 0.05);
   align-items: center;
   justify-content: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
   color: #0d0b0a;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.join-btn:hover,
+.join-btn:focus {
+  background-color: #f2f2f2;
+}
+.learn-btn:hover,
+.learn-btn:focus {
+  background-color: #c2d9fc;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-bottom: 24px;
+  }
+  .hero-title {
+    width: 423px;
+    height: 106px;
+    margin-bottom: 16px;
+    margin-top: 24px;
+  }
+
+  .title-part-one {
+    display: none;
+  }
+  .title-part-two {
+    display: inline-block;
+  }
+  .hero-paragraph {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+  .hero-list {
+    flex-direction: row;
+    gap: 16px;
+  }
+  .join-btn {
+    width: 144px;
+  }
+  .learn-btn {
+    width: 144px;
+  }
+}
+@media screen and (min-width: 1336px) {
+  .hero-container {
+    display: flex;
+    gap: 24px;
+  }
+  .hero-title-box {
+    display: flex;
+  }
+  .hero {
+    padding-bottom: 80px;
+  }
+  .hero-title {
+    width: 644px;
+    height: 258px;
+    font-size: 72px;
+    margin-top: 80px;
+  }
+  .hero-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .join-btn {
+    width: 113px;
+  }
+  .learn-btn {
+    width: 128px;
+  }
 }
