@@ -1,0 +1,149 @@
+.aboutus-section {
+  background: #dfebeb;
+}
+
+.aboutus-section .container {
+  padding: 64px 16px;
+}
+
+.aboutus-main-title {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 20px;
+}
+
+.aboutus-main-text {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 48px;
+}
+
+.aboutus-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.aboutus-title {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 20px;
+}
+
+.aboutus-text {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: #0d0b0a;
+}
+
+.aboutus-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #c2d9fc;
+  border-radius: 100px;
+  padding: 10px 24px;
+  width: 100%;
+  max-width: 343px;
+  height: 46px;
+  background-color: #c2d9fc;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0d0b0a;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.aboutus-now {
+  display: none;
+}
+
+.aboutus-link:hover,
+.aboutus-link:focus {
+  border: 1px solid rgba(255, 255, 255, 0);
+  background-color: rgba(13, 11, 10, 0.05);
+}
+
+@media only screen and (min-width: 768px) {
+  .aboutus-section {
+    background: #f2fafa;
+  }
+
+  .aboutus-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 32px 40px 32px;
+  }
+  .aboutus-main-title {
+    margin-bottom: 24px;
+  }
+  .aboutus-main-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .aboutus-list {
+    flex-direction: row;
+    column-gap: 24px;
+    row-gap: 46px;
+    margin-bottom: 62px;
+  }
+  .aboutus-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .aboutus-title {
+    margin-bottom: 0;
+  }
+  .aboutus-link {
+    max-width: 110px;
+  }
+  .aboutus-now {
+    display: flex;
+    margin-left: 3px;
+  }
+}
+
+@media only screen and (min-width: 1336px) {
+  .aboutus-section .container {
+    padding: 112px 64px;
+  }
+
+  .aboutus-main-title {
+    font-size: 52px;
+  }
+
+  .aboutus-list {
+    column-gap: 24px;
+    row-gap: 0;
+    margin-bottom: 40px;
+  }
+
+  .aboutus-list-item {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+
+  .aboutus-title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+}
