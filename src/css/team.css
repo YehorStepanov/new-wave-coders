@@ -31,7 +31,6 @@
 
 .team-subtitle {
   margin-bottom: 48px;
-  font-family: var(--font-family);
   line-height: 1.6;
   text-align: center;
 }
@@ -45,6 +44,10 @@
 
 .team-card {
   min-height: 404px;
+}
+
+.team-member-card {
+  display: none;
 }
 
 .team-card-img {
@@ -66,7 +69,6 @@
 }
 
 .team-card-title {
-  font-family: var(--font-family);
   font-weight: 600;
   font-size: 18px;
 }
@@ -135,6 +137,14 @@
     min-height: 630px;
   }
 
+  .team-hiring-card {
+    display: none;
+  }
+
+  .team-member-card {
+    display: block;
+  }
+
   .team-card-img {
     width: 340px;
     height: auto;
@@ -178,7 +188,7 @@
   }
 
   .team-card-text-wrap {
-    padding: 24px 0;
+    padding: 24px 0 0;
   }
 }
 
