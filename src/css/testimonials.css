@@ -45,11 +45,21 @@
   margin-bottom: 32px;
 }
 
+.testimonials-content-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials-list-img {
+  border-radius: 100%;
+  margin-bottom: 16px;
+}
+
 .testimonials-list-name {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.6;
-  text-align: center;
   color: #0d0b0a;
 }
 
@@ -58,6 +68,5 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  text-align: center;
   color: #0d0b0a;
 }
