@@ -1,8 +1,11 @@
 .gallery {
-  padding: 64px 0;
+  padding: 64px 0px;
   background-color: #f2fafa;
 }
-
+.gallery-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .gallery-title {
   font-family: 'Cabin', sans-serif;
   font-weight: 400;
@@ -13,7 +16,7 @@
   color: #0d0b0a;
   margin-bottom: 20px;
 }
-.galerry-paragraph {
+.gallery-paragraph {
   font-family: 'Sarabun', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -33,9 +36,17 @@
   border-radius: 16px;
   width: 100%;
 }
+.gallery-list li {
+  width: calc((100% - 24px) / 2);
+}
+
 @media screen and (min-width: 768px) {
   .gallery {
     padding: 40px 0;
+  }
+  .gallery-container {
+    padding-left: 32px;
+    padding-right: 32px;
   }
   .gallery-title {
     margin-bottom: 24px;
@@ -54,6 +65,10 @@
 @media screen and (min-width: 1336px) {
   .gallery {
     padding: 112px 0;
+  }
+  .gallery-container {
+    padding-left: 64px;
+    padding-right: 64px;
   }
   .gallery-title {
     font-size: 52px;
