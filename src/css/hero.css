@@ -98,6 +98,10 @@
   .hero {
     padding-bottom: 24px;
   }
+  .hero-container {
+    margin-top: 80px;
+    display: flex;
+  }
 
   .hero-title {
     width: 423px;
@@ -132,24 +136,26 @@
   }
 }
 @media screen and (min-width: 1336px) {
+  .hero {
+    padding-bottom: 80px;
+  }
   .hero-container {
     display: flex;
     margin-top: 80px;
     align-items: flex-start;
+    flex-direction: row;
     gap: 24px;
+    min-height: 258px;
   }
-  .hero-title-box {
-    display: flex;
-  }
+
   .hero-title {
     font-size: 72px;
     width: 644px;
-    height: 258px;
+    margin: 0;
   }
 
   .hero-wrap {
-    display: flex;
-    flex-direction: column;
+    padding: 8px 0;
   }
   .hero-image img {
     max-width: 1440px;
