@@ -1,4 +1,4 @@
-<section class="yoga-classes-section">
+<section class="yoga-classes-section" id="classes">
   <div class="container yoga-classes">
     <p class="explore-text">Explore</p>
     <h2 class="yoga-classes-title">Discover Our Most Popular Yoga Programs</h2>
@@ -10,14 +10,71 @@
 
     <ul class="yoga-classes-ul">
       <li class="yoga-classes-list">
-        <!-- <img src="./images/images-8.jpg" alt="Screen Illustrations" width="360"> -->
-        <h3 class="yoga-classes-h3">Beginner Yoga: Foundations</h3>
+        <picture class="yoga-classes-picture">
+          <source
+            media="(min-width: 1336px)"
+            srcset="
+              img/yogaclasses/Placeholder-1-desk.png    1x,
+              img/yogaclasses/Placeholder-1-desk@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              img/yogaclasses/Placeholder-1-tab.png 1x,
+              img/yogaclasses/Placeholder-1-tab@2x.png 2x
+            "
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              img/yogaclasses/Placeholder-1-mob.png    1x,
+              img/yogaclasses/Placeholder-1-mob@2x.png 2x
+            "
+          />
+          <img
+            class="yoga-classes-img"
+            src="img/yogaclasses/Placeholder-1-mob.png"
+            alt="stretching"
+          />
+        </picture>
+        <h3 class="yoga-classes-h3">
+          Beginner Yoga: Foundations
+          <span class="span-desk"> New Practitioners</span>
+        </h3>
         <p class="paragraph-learn">
           Learn the basics of yoga in a supportive environment.
         </p>
       </li>
       <li class="yoga-classes-list">
-        <!-- <img src="./images/images-8.jpg" alt="Screen Illustrations" width="360"> -->
+        <picture class="yoga-classes-picture">
+          <source
+            media="(min-width: 1336px)"
+            srcset="
+              img/yogaclasses/Placeholder-2-desk.png    1x,
+              img/yogaclasses/Placeholder-2-desk@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              img/yogaclasses/Placeholder-2-tab.png 1x,
+              img/yogaclasses/Placeholder-2-tab@2x.png 2x
+            "
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              img/yogaclasses/Placeholder-2-mob.png    1x,
+              img/yogaclasses/Placeholder-2-mob@2x.png 2x
+            "
+          />
+          <img
+            class="yoga-classes-img"
+            src="img/yogaclasses/Placeholder-2-mob.png"
+            alt="lotus position"
+          />
+        </picture>
         <h3 class="yoga-classes-h3">
           Vinyasa Flow: Energize Your Body and Mind
         </h3>
@@ -26,15 +83,46 @@
         </p>
       </li>
       <li class="yoga-classes-list">
-        <!-- <img src="./images/images-8.jpg" alt="Screen Illustrations" width="360"> -->
-        <h3 class="yoga-classes-h3">
-          Restorative Yoga: Deep Relaxation and Healing
-        </h3>
-        <p class="paragraph-learn">
-          Unwind and rejuvenate with gentle poses and mindfulness.
-        </p>
+        <picture class="yoga-classes-picture">
+          <source
+            media="(min-width: 1336px)"
+            srcset="
+              img/yogaclasses/Placeholder-3-desk.png    1x,
+              img/yogaclasses/Placeholder-3-desk@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              img/yogaclasses/Placeholder-3-tab.png    1x,
+              img/yogaclasses/Placeholder-3-tab@2x.png 2x
+            "
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              img/yogaclasses/Placeholder-3-mob.png    1x,
+              img/yogaclasses/Placeholder-3-mob@2x.png 2x
+            "
+          />
+          <img
+            class="yoga-classes-img"
+            src="img/yogaclasses/Placeholder-3-mob.png"
+            alt="zen pose"
+          />
+        </picture>
+        <div class="restorative">
+          <h3 class="yoga-classes-h3 tab">
+            Restorative Yoga: Deep Relaxation and Healing
+          </h3>
+          <p class="paragraph-learn tab pad">
+            Unwind and rejuvenate with gentle poses and mindfulness.
+          </p>
+        </div>
       </li>
     </ul>
-    <a class="yoga-classes-link" href="#pricing">Join now</a>
+    <a class="yoga-classes-link" href="#pricing"
+      >Join <span class="yoga-span"> now</span>
+    </a>
   </div>
 </section>
