@@ -98,6 +98,7 @@
   .hero {
     padding-bottom: 24px;
   }
+
   .hero-title {
     width: 423px;
     height: 106px;
@@ -131,11 +132,24 @@
   }
 }
 @media screen and (min-width: 1336px) {
+  .hero-container {
+    display: flex;
+    margin-top: 80px;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .hero-title-box {
+    display: flex;
+  }
   .hero-title {
+    font-size: 72px;
     width: 644px;
     height: 258px;
-    font-size: 72px;
-    margin: 0;
+  }
+
+  .hero-wrap {
+    display: flex;
+    flex-direction: column;
   }
 
   .join-btn {
