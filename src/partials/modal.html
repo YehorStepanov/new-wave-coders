@@ -1,125 +1,81 @@
-<!-- modal -->
-<section>
-  <div class="container">
-    <div class="overlay-first">
-      <div class="modal-window">
-        <button class="close-btn" type="button" data-modal-close>
-          <svg class="icons-close" width="14" height="14">
-            <use href="./img/sprite.svg#close-icon"></use>
-          </svg>
-        </button>
-        <div class="container-modal">
-          <h1 class="modal-title">Join Now!</h1>
-          <p class="modal-subtitle">One Session</p>
-          <ul>
-            <li>$10</li>
-          </ul>
+<!-- modal 10$ -->
+<section class="modal-overlay">
+  <div class="modal-window">
+    <button class="close-btn" type="button">&times;</button>
+    <h1 class="modal-title">Join Now!</h1>
+    <p class="modal-subtitle">One Session</p>
+    <p class="modal-price">$10</p>
+    <form class="modal-form">
+      <label for="name" class="form-label">Your Name</label>
+      <input type="text" id="name" class="input full-width" placeholder="Liam" />
+
+      <div class="input-row">
+        <div class="input-column">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="input" placeholder="hello@yogabloom.com" />
         </div>
-        <div>
-          <form class="modal-form">
-            <label class="form-label" for="user-name">Your Name</label>
-            <input type="text" placeholder="Liam" class="input full-width" />
-            <div class="input-group">
-              <label class="form-label" for="email">Email</label>
-              <input
-                type="email"
-                placeholder="hello@yogabloom.com"
-                class="input"
-              />
-              <label class="form-label" for="phone">Phone number</label>
-              <input
-                type="tel"
-                placeholder="+380 (95) 123 12 12"
-                class="input"
-              />
-            </div>
-            <button type="submit" class="submit-button">Go to checkout</button>
-          </form>
+        <div class="input-column">
+          <label for="phone" class="form-label">Phone number</label>
+          <input type="tel" id="phone" class="input" placeholder="+380 (95) 123 12 12" />
         </div>
       </div>
 
-      <div class="overlay-second">
-        <div class="modal-window">
-          <button class="close-btn" type="button" data-modal-close>
-            <svg class="icons-close" width="14" height="14">
-              <use href="./img/sprite.svg#close-icon"></use>
-            </svg>
-          </button>
-          <div class="container-modal">
-            <h1 class="modal-title">Join Now!</h1>
-            <p class="modal-subtitle">8 Sessions Package</p>
-            <ul>
-              <li>$65</li>
-            </ul>
-          </div>
-          <div>
-            <form class="modal-form">
-              <label class="form-label" for="user-name">Your Name</label>
-              <input type="text" placeholder="Liam" class="input full-width" />
-              <div class="input-group">
-                <label class="form-label" for="email">Email</label>
-                <input
-                  type="email"
-                  placeholder="hello@yogabloom.com"
-                  class="input"
-                />
-                <label class="form-label" for="phone">Phone number</label>
-                <input
-                  type="tel"
-                  placeholder="+380 (95) 123 12 12"
-                  class="input"
-                />
-              </div>
-              <button type="submit" class="submit-button">
-                Go to checkout
-              </button>
-            </form>
-          </div>
-        </div>
-        <div class="overlay-third">
-          <div class="modal-window">
-            <button class="close-btn" type="button" data-modal-close>
-              <svg class="icons-close" width="14" height="14">
-                <use href="./img/sprite.svg#close-icon"></use>
-              </svg>
-            </button>
-            <div class="container-modal">
-              <h1 class="modal-title">Join Now!</h1>
-              <p class="modal-subtitle">12 Sessions Package</p>
-              <ul>
-                <li>$80</li>
-              </ul>
-            </div>
-            <div>
-              <form class="modal-form">
-                <label class="form-label" for="user-name">Your Name</label>
-                <input
-                  type="text"
-                  placeholder="Liam"
-                  class="input full-width"
-                />
-                <div class="input-group">
-                  <label class="form-label" for="email">Email</label>
-                  <input
-                    type="email"
-                    placeholder="hello@yogabloom.com"
-                    class="input"
-                  />
-                  <label class="form-label" for="phone">Phone number</label>
-                  <input
-                    type="tel"
-                    placeholder="+380 (95) 123 12 12"
-                    class="input"
-                  />
-                </div>
-                <button type="submit" class="submit-button">
-                  Go to checkout
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <button type="submit" class="submit-button">Go to checkout</button>
+    </form>
   </div>
 </section>
+<!-- modal 65$ -->
+<section class="modal-overlay">
+  <div class="modal-window">
+    <button class="close-btn" type="button">&times;</button>
+    <h1 class="modal-title">Join Now!</h1>
+    <p class="modal-subtitle">8 Sessions Package</p>
+    <p class="modal-price">$65</p>
+    <form class="modal-form">
+      <label for="name" class="form-label">Your Name</label>
+      <input type="text" id="name" class="input full-width" placeholder="Liam" />
+
+      <div class="input-row">
+        <div class="input-column">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="input" placeholder="hello@yogabloom.com" />
+        </div>
+        <div class="input-column">
+          <label for="phone" class="form-label">Phone number</label>
+          <input type="tel" id="phone" class="input" placeholder="+380 (95) 123 12 12" />
+        </div>
+      </div>
+
+      <button type="submit" class="submit-button">Go to checkout</button>
+    </form>
+  </div>
+</section>
+<!-- modal 80$ -->
+<section class="modal-overlay">
+  <div class="modal-window">
+    <button class="close-btn" type="button">&times;</button>
+    <h1 class="modal-title">Join Now!</h1>
+    <p class="modal-subtitle">12 Sessions Package</p>
+    <p class="modal-price">$80</p>
+    <form class="modal-form">
+      <label for="name" class="form-label">Your Name</label>
+      <input type="text" id="name" class="input full-width" placeholder="Liam" />
+
+      <div class="input-row">
+        <div class="input-column">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="input" placeholder="hello@yogabloom.com" />
+        </div>
+        <div class="input-column">
+          <label for="phone" class="form-label">Phone number</label>
+          <input type="tel" id="phone" class="input" placeholder="+380 (95) 123 12 12" />
+        </div>
+      </div>
+
+      <button type="submit" class="submit-button">Go to checkout</button>
+    </form>
+  </div>
+</section>
+</body>
+
+</html>
