@@ -20,12 +20,15 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 20px;
 }
 
+.footer-logo {
+  margin-bottom: 20px;
+}
 .subscribe-title {
   line-height: 1.6;
   color: #0d0b0a;
+  margin-bottom: 20px;
 }
 
 .footer-form {
@@ -34,6 +37,7 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 16px;
+  margin-bottom: 12px;
 }
 
 .email-input {
@@ -149,17 +153,19 @@
     padding-bottom: 40px;
   }
 
-  .newsletter {
-    gap: 24px;
+  .footer-logo {
+    margin-bottom: 24px;
   }
 
   .subscribe-title {
     line-height: 1.6;
     color: #0d0b0a;
+    margin-bottom: 24px;
   }
 
   .footer-form {
     flex-direction: row;
+    margin-bottom: 16px;
   }
 
   .email-input {
@@ -205,19 +211,21 @@
     align-items: center;
     justify-content: space-between;
     padding: 48px;
-    gap: 24px;
+    column-gap: 128px;
+    row-gap: 24px;
   }
 
   .email-input {
     width: 501px;
   }
-
+  .footer-form {
+    margin-bottom: 12px;
+  }
   .quick-links {
     width: 165px;
     height: 194px;
   }
 
- 
   .contacts-container {
     width: 165px;
     height: 202px;
