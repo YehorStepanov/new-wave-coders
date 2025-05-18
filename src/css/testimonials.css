@@ -1,0 +1,121 @@
+.testimonials-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background: #f2fafa;
+}
+
+.testimonials-title {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 20px;
+}
+
+.testimonials-main-qwe {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 24px;
+}
+
+.testimonials-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.testimonials-list-parts {
+  border-radius: 24px;
+  background: #dfebeb;
+  padding: 12px;
+}
+
+.testimonials-list-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.6;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 32px;
+}
+
+.testimonials-content-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials-list-img {
+  border-radius: 100%;
+  margin-bottom: 16px;
+}
+
+.testimonials-list-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #0d0b0a;
+}
+
+.testimonials-list-proff {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #0d0b0a;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .testimonials-title {
+    margin-bottom: 24px;
+    font-size: 40px;
+  }
+
+  .testimonials-list-parts:nth-child(1) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .testimonials-list-parts:nth-child(2) .testimonials-list-text {
+    margin-bottom: 102px;
+  }
+
+  .testimonials-list-parts:nth-child(3) .testimonials-list-text {
+    margin-bottom: 67px;
+  }
+}
+
+@media screen and (min-width: 1336px) {
+  .testimonials-section {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  .testimonials-title {
+    font-size: 52px;
+  }
+
+  .testimonials-list-parts:nth-child(1) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .testimonials-list-parts {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .testimonials-list {
+    gap: 24px;
+  }
+}
