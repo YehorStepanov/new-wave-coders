@@ -1,0 +1,88 @@
+.gallery {
+  padding: 64px 0px;
+  background-color: #f2fafa;
+}
+.gallery-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.gallery-title {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 20px;
+}
+.gallery-paragraph {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 48px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery-img {
+  border-radius: 16px;
+  width: 100%;
+}
+.gallery-list li {
+  width: calc((100% - 24px) / 2);
+}
+
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding: 40px 0;
+  }
+  .gallery-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .gallery-title {
+    margin-bottom: 24px;
+  }
+  .gallery-paragraph {
+    margin-bottom: 80px;
+  }
+  .gallery-list li {
+    width: calc((100% - 24px) / 2);
+  }
+  .gallery-img {
+    width: 340px;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1336px) {
+  .gallery {
+    padding: 112px 0;
+  }
+  .gallery-container {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+  .gallery-title {
+    font-size: 52px;
+  }
+  .gallery-paragraph {
+    font-weight: 500;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .gallery-img {
+    width: 421px;
+  }
+  .gallery-list li {
+    width: calc((100% - 48px) / 3);
+  }
+}
