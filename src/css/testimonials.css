@@ -27,7 +27,7 @@
 .testimonials-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 36px;
+  gap: 24px;
 }
 
 .testimonials-list-parts {
@@ -79,6 +79,7 @@
 
   .testimonials-title {
     margin-bottom: 24px;
+    font-size: 40px;
   }
 
   .testimonials-list-parts:nth-child(1) {
@@ -99,6 +100,10 @@
   .testimonials-section {
     padding-top: 112px;
     padding-bottom: 112px;
+  }
+
+  .testimonials-title {
+    font-size: 52px;
   }
 
   .testimonials-list-parts:nth-child(1) {
