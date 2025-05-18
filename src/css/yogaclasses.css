@@ -1,18 +1,25 @@
 .yoga-classes-section {
   background-color: #dfebeb;
 }
+.yoga-classes-link:hover,
+.yoga-classes-link:focus {
+  border: 1px solid rgba(255, 255, 255, 0);
+  background-color: rgba(13, 11, 10, 0.05);
+}
 
 .yoga-classes {
   display: flex;
   flex-direction: column;
+  padding: 64px 16px;
+}
+.yoga-classes-list:hover .yoga-classes-img {
+  transform: scale(1.02);
 }
 
 .explore-text {
   font-family: 'Sarabun', sans-serif;
   text-align: center;
   padding-bottom: 12px;
-  padding-top: 64px;
-
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
@@ -54,6 +61,7 @@
   padding-bottom: 24px;
   max-width: 100%;
   height: auto;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .yoga-classes-h3 {
@@ -91,8 +99,10 @@
   justify-content: center;
   line-height: 1.6;
   color: #0d0b0a;
-  margin-bottom: 64px;
+
   font-family: 'Sarabun', sans-serif;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .yoga-span {
@@ -101,9 +111,11 @@
 
 @media screen and (min-width: 768px) {
   .explore-text {
-    padding: 40px 0 16px;
+    padding-bottom: 16px;
   }
-
+  .yoga-classes {
+    padding: 40px 32px;
+  }
   .yoga-classes-title {
     padding-bottom: 24px;
   }
@@ -154,7 +166,6 @@
     display: flex;
     margin: 0 auto;
     max-width: 110px;
-    margin-bottom: 40px;
     margin-top: 40px;
   }
 
@@ -174,9 +185,11 @@
 
 @media only screen and (min-width: 1336px) {
   .explore-text {
-    padding: 112px 0 16px;
+    padding-bottom: 16px;
   }
-
+  .yoga-classes {
+    padding: 112px 64px;
+  }
   .yoga-classes-title {
     margin: 0 auto;
     max-width: 768px;
@@ -210,25 +223,12 @@
     width: calc((100% - 48px) / 3);
   }
 
-  .yoga-classes-list:hover .yoga-classes-img {
-    transform: scale(1.02);
-  }
-
   .yoga-classes-link {
-    margin:0 auto;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .yoga-classes-link:hover,
-  .yoga-classes-link:focus {
-    border: 1px solid rgba(255, 255, 255, 0);
-    background-color: rgba(13, 11, 10, 0.05);
+    margin: 0 auto;
   }
 
   .yoga-classes-img {
     padding-bottom: 32px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .yoga-classes {
