@@ -1,0 +1,406 @@
+* {
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cabin', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.group-list li {
+  display: flex;
+  align-items: center; 
+  gap: 16px; 
+}
+
+.group-list li img {
+  width: 16px;
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+     .container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.price-stn {
+    background-color: #F8FBFE;
+}
+
+.pricing-plans {
+    text-align: center;
+    padding-top: 64px;
+}
+
+.aff {
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0em;
+}
+
+.pricing {
+    margin-top: 16px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    margin-bottom: 24px;
+}
+
+.choose {
+   font-weight: 400;
+   font-weight: 18px;
+   line-height: 1.6;
+   letter-spacing: 0em;
+}
+
+.session {
+    width: 430px;
+    background-color: #DFEBEB;
+    border-radius: 16px;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    margin-top: 48px;
+}
+
+.join {
+    gap: 24px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.one-session {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: -32px;
+    margin-right: 32px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.4%;
+    letter-spacing: 0.01em;
+}
+
+.price {
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    margin-bottom: 32px;
+    margin-top: 8px;
+}
+
+.btn {  
+    border-radius: 100px;
+    background-color: #C2D9FC;
+    width: 358px;
+    padding: 10px 24px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 116px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-join {
+    font-family: 'Sarabun', sans-serif;
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0;
+}
+
+.price-container {
+    margin-right: 32px;
+}
+
+.prise-list {
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0em;
+}
+
+.btn.groups {
+   margin: 0 auto;
+   padding: 10px 24px;
+   margin-top: 32px;
+}
+
+.joins {
+   display: none;
+}
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1123px) {
+    .price-stn {
+    background-color: #F2FAFA;
+    }
+
+.pricing-plans {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.aff {
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0em;
+}
+
+.pricing {
+    margin-top: 16px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    margin-bottom: 24px;
+}
+
+.choose {
+   font-weight: 400;
+   font-weight: 18px;
+   line-height: 1.6;
+   letter-spacing: 0em;
+}
+
+.session {
+    width: 430px;
+    background-color: #DFEBEB;
+    border-radius: 16px;
+    padding-bottom: 32px;
+}
+
+.join {
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.one-session {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: -32px;
+    margin-right: 32px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.4%;
+    letter-spacing: 0.01em;
+}
+
+.price {
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    margin-bottom: 32px;
+    margin-top: 8px;
+}
+
+.btn {  
+    border-radius: 100px;
+    background-color: #C2D9FC;
+    width: 358px;
+    padding: 10px 24px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 116px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-join {
+    font-family: 'Sarabun', sans-serif;
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0;
+}
+
+.price-container {
+    margin-right: 32px;
+}
+
+.prise-list {
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0em;
+}
+.join {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.session {
+    flex: 1 1 48%;
+}
+
+.session.prices-three {
+    order: 2;
+    flex: 1 1 100%;
+}
+
+.group {
+  margin-left: 368px;
+  width: 320px;
+}
+
+.group-list {
+    margin-left: 80px;
+}
+
+.joins {
+   display: none;
+}
+
+}
+
+@media screen and (min-width: 1124px) {
+    .container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.price-stn {
+    background-color: #F2FAFA;
+}
+
+.pricing-plans {
+    text-align: center;
+    padding-top: 112px;
+}
+
+.aff {
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0em;
+}
+
+.pricing {
+    margin-top: 16px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    margin-bottom: 24px;
+}
+
+.choose {
+   font-weight: 400;
+   font-weight: 18px;
+   line-height: 1.6;
+   letter-spacing: 0em;
+}
+
+.session {
+    width: 430px;
+    background-color: #DFEBEB;
+    border-radius: 16px;
+    padding-bottom: 32px;
+}
+
+.join {
+    display: flex;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.one-session {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: -32px;
+    margin-right: 32px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.4%;
+    letter-spacing: 0.01em;
+}
+
+.price {
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    margin-bottom: 32px;
+    margin-top: 8px;
+}
+
+.btn {  
+    border-radius: 100px;
+    background-color: #C2D9FC;
+    width: 358px;
+    padding: 10px 24px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 116px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-join {
+    font-family: 'Sarabun', sans-serif;
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0;
+}
+
+.price-container {
+    margin-right: 32px;
+}
+
+.prise-list {
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0em;
+}
+
+.btn.groups {
+   margin: 0 auto;
+   padding: 10px 24px;
+}
+
+.joins {
+   display: none;
+}
+
+
+}
