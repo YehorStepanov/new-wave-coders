@@ -1,25 +1,27 @@
-/* main styles */
-.modal-overlay {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 128px 0;
+/* Скрыть модалки по умолчанию */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background: rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-.modal-window {
+.modal-toggle:checked + .overlay {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 64px;
-  box-sizing: border-box;
-  border-radius: 16px;
-  width: 768px;
-  max-width: 90%;
-  background: #dfebeb;
-  position: relative;
+}
+
+/* Крестик и фон */
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 .close-btn {
@@ -32,72 +34,48 @@
   cursor: pointer;
 }
 
-.modal-title {
-  line-height: 1.2;
-  letter-spacing: 0.01em;
+/* Окно */
+.modal-window {
+  position: relative;
+  background: #dfebeb;
+  border-radius: 16px;
+  padding: 64px 32px;
+  max-width: 768px;
+  width: 90%;
+  z-index: 10;
+}
+
+/* Тексты и формы */
+.modal-title,
+.modal-subtitle,
+.modal-price {
   text-align: center;
-  color: #0d0b0a;
-  font-size: 36px;
-  margin-bottom: 10px;
   font-family: 'Cabin', sans-serif;
+  margin-bottom: 10px;
+}
+
+.modal-title {
+  font-size: 36px;
 }
 
 .modal-subtitle {
-  font-weight: 400;
   font-size: 22px;
-  line-height: 1.4;
-  letter-spacing: 0.01em;
-  text-align: center;
-  color: #0d0b0a;
-  font-family: 'Cabin', sans-serif;
-  margin-bottom: 10px;
 }
 
 .modal-price {
-  font-weight: 400;
   font-size: 36px;
-  line-height: 1.4;
-  letter-spacing: 0.01em;
-  text-align: center;
-  color: #0d0b0a;
-  font-family: 'Cabin', sans-serif;
   margin-bottom: 30px;
 }
 
 .modal-form {
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.form-label {
-  line-height: 1.6;
-  color: #0d0b0a;
-  font-weight: 400;
-  font-size: 16px;
-  font-family: 'Sarabun', sans-serif;
-  margin-bottom: 8px;
-  text-align: left;
-}
-
-.input {
-  padding: 12px 14px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 100%;
-}
-
-.full-width {
-  width: 100%;
-}
-
 .input-row {
   display: flex;
   gap: 20px;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .input-column {
@@ -106,32 +84,28 @@
   flex-direction: column;
 }
 
+.input {
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
 .submit-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border: 1px solid #c2d9fc;
+  background: #c2d9fc;
   border-radius: 100px;
   padding: 10px 24px;
   width: 100%;
-  height: 46px;
-  background: #c2d9fc;
-  font-family: 'Sarabun', sans-serif;
-  white-space: nowrap;
+  border: none;
   cursor: pointer;
 }
 
-.submit-button:hover {
-  background-color: #333;
-  color: #fff;
-}
-
-/* media for tablet */
-@media screen and (max-width: 1024px) {
+/* Адаптация */
+@media (max-width: 767px) {
   .modal-window {
-    width: 90%;
-    padding: 48px;
+    padding: 32px 16px;
+    width: 100%;
+    height: auto;
   }
 
   .input-row {
@@ -139,15 +113,67 @@
   }
 }
 
-/* media for mobile */
-@media screen and (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1335px) {
   .modal-window {
-    width: 100%;
-    padding: 32px 16px;
-    border-radius: 0;
+    max-width: 600px;
   }
+}
 
-  .submit-button {
-    width: 100%;
+@media (min-width: 1336px) {
+  .modal-window {
+    max-width: 768px;
   }
+}
+/* Модалки показываются, если чекбокс включён */
+#modal-1:checked~.modal-1,
+#modal-2:checked~.modal-2,
+#modal-3:checked~.modal-3 {
+  display: flex;
+}
+
+/* Базовая стилизация для модальных окон */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-window {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 768px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Временные кнопки для теста */
+.open-btn {
+  margin: 20px;
+  padding: 10px 20px;
+  background: #9dcfff;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
 }
