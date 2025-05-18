@@ -55,6 +55,9 @@
   display: flex;
   transform: translateX(0);
   max-width: 1336px;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 @media (max-width: 768px) {
@@ -138,14 +141,18 @@
   }
 
   .close-box {
-    width: 24px;
-    height: 24px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 8px;
     box-shadow: 0 2px 6px transparent;
     border-radius: 50%;
+  }
+  .close-icon {
+    width: 12px;
+    height: 12px;
   }
   .close-box:hover,
   .close-box:focus {
@@ -171,6 +178,30 @@
     color: #0d0b0a;
   }
 
+  .mobile-menu-list a {
+    text-decoration: none;
+    color: #0d0b0a;
+    padding-bottom: 4px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+  }
+
+  .mobile-menu-list a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    border-bottom: 2px solid rgba(13, 11, 10, 0.5);
+    transition: width 0.3s ease-in-out;
+  }
+
+  .mobile-menu-list a:hover::after {
+    width: 100%;
+    border-bottom: 2px solid rgba(13, 11, 10, 0.5);
+  }
+
   .mobile-join {
     width: 100%;
     padding: 10px 24px;
@@ -180,7 +211,7 @@
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
-    margin-top: auto;
+    margin-top: 288px;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
@@ -308,11 +339,12 @@
     border: 1px solid rgba(255, 255, 255, 0);
     background-color: rgba(13, 11, 10, 0.05);
   }
-  .navigator-list-join {
+  .mobile-join-mob {
     color: #000;
   }
-  .navigator-list-join::after {
-    content: ' Now';
+  .mobile-join-mob::after {
+    content: '  Now';
+    margin-left: 3px;
   }
 
   .menu-close-btn {
@@ -357,6 +389,30 @@
     color: #0d0b0a;
   }
 
+  .mobile-menu-list a {
+    text-decoration: none;
+    color: #0d0b0a;
+    padding-bottom: 4px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+  }
+
+  .mobile-menu-list a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    border-bottom: 2px solid rgba(13, 11, 10, 0.5);
+    transition: width 0.3s ease-in-out;
+  }
+
+  .mobile-menu-list a:hover::after {
+    width: 100%;
+    border-bottom: 2px solid rgba(13, 11, 10, 0.5);
+  }
+
   .mobile-join {
     width: 204px;
     height: 46px;
@@ -367,7 +423,7 @@
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
-    margin-top: auto;
+    margin-top: 276px;
     margin-bottom: auto;
     margin-left: 32px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -410,6 +466,7 @@
     transform: translateY(-50%);
     background-color: #c2d9fc;
     padding: 8px 20px;
+    margin-right: 32px;
     border: none;
     border-radius: 999px;
     font-weight: 500;
