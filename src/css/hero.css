@@ -1,24 +1,15 @@
 .hero {
   background-color: #f2fafa;
   padding-bottom: 48px;
-  position: relative;
 }
 
 .hero-image {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  display: block;
-  z-index: 0;
-}
-.hero-image img {
   width: 100%;
-  height: auto;
+  max-width: 375px;
+  display: block;
+  margin: 0 auto;
 }
+
 .hero-title {
   font-family: 'Cabin', sans-serif;
   font-weight: 400;
@@ -99,8 +90,11 @@
     padding-bottom: 24px;
   }
   .hero-container {
-    margin-top: 80px;
     display: flex;
+    flex-direction: column;
+  }
+  .hero-image {
+    max-width: 768px;
   }
 
   .hero-title {
@@ -157,7 +151,7 @@
   .hero-wrap {
     padding: 8px 0;
   }
-  .hero-image img {
+  .hero-image {
     max-width: 1440px;
   }
   .join-btn {
