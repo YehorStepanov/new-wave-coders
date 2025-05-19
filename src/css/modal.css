@@ -194,13 +194,3 @@
   align-items: center;
   justify-content: center;
 }
-
-/* Временные кнопки для теста */
-.open-btn {
-  margin: 20px;
-  padding: 10px 20px;
-  background: #9dcfff;
-  border-radius: 8px;
-  cursor: pointer;
-  display: inline-block;
-}
