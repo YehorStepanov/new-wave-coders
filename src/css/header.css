@@ -60,7 +60,7 @@
   right: 0;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 375px) {
   .desktop-nav {
     display: none;
   }
@@ -89,6 +89,9 @@
     align-items: center;
     justify-content: center;
     margin: 14px 14px;
+    height: 34px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .join-box:hover,
   .join-box:focus {
@@ -148,7 +151,8 @@
     justify-content: center;
     border-radius: 8px;
     box-shadow: 0 2px 6px transparent;
-    border-radius: 50%;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .close-icon {
     width: 12px;
@@ -360,9 +364,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
     box-shadow: 0 2px 6px transparent;
-    margin-left: 44px;
     width: 24px;
     height: 24px;
   }
@@ -466,7 +468,6 @@
     transform: translateY(-50%);
     background-color: #c2d9fc;
     padding: 8px 20px;
-    margin-right: 32px;
     border: none;
     border-radius: 999px;
     font-weight: 500;
@@ -572,6 +573,8 @@
     background-color: #c2d9fc;
     border-radius: 100px;
     padding: 8px 20px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .join-box:hover,
   .join-box:focus {
