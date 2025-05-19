@@ -32,6 +32,8 @@
   background: none;
   border: none;
   cursor: pointer;
+  width: 32px;
+  height: 32px;
 }
 
 /* Окно */
@@ -96,8 +98,15 @@
   border-radius: 100px;
   padding: 10px 24px;
   width: 100%;
+  height: 46px;
+  font-size: 16px;
   border: none;
   cursor: pointer;
+  font-family: "Sarabun", sans-serif;
+}
+.submit-button:hover,
+.submit-button:focus {
+  background: rgba(13, 11, 10, 0.05);
 }
 
 /* Адаптация */
@@ -111,6 +120,7 @@
   .input-row {
     flex-direction: column;
   }
+ 
 }
 
 @media (min-width: 768px) and (max-width: 1335px) {
@@ -124,10 +134,18 @@
     max-width: 768px;
   }
 }
+@media (min-width: 1336px) {
+    .submit-button {
+      width: 155px;
+      height: 46px;
+      margin: 0 auto;
+      display: block;
+    }
+}
 /* Модалки показываются, если чекбокс включён */
-#modal-1:checked~.modal-1,
-#modal-2:checked~.modal-2,
-#modal-3:checked~.modal-3 {
+#modal-1:checked ~ .modal-1,
+#modal-2:checked ~ .modal-2,
+#modal-3:checked ~ .modal-3 {
   display: flex;
 }
 
@@ -166,6 +184,8 @@
   background: none;
   border: none;
   cursor: pointer;
+  width: 32px;
+  height: 32px;
 }
 
 /* Временные кнопки для теста */
