@@ -122,6 +122,20 @@
   }
  
 }
+@media (min-width: 768px) {
+  .submit-button {
+    width: 155px;
+    height: 46px;
+    margin: 0 auto;
+    display: block;
+    
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+}
 
 @media (min-width: 768px) and (max-width: 1335px) {
   .modal-window {
@@ -160,16 +174,6 @@
   z-index: 1000;
 }
 
-.modal-window {
-  background: white;
-  padding: 32px;
-  border-radius: 16px;
-  width: 90%;
-  max-width: 768px;
-  position: relative;
-  box-sizing: border-box;
-}
-
 .backdrop {
   position: absolute;
   inset: 0;
@@ -186,6 +190,9 @@
   cursor: pointer;
   width: 32px;
   height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Временные кнопки для теста */
