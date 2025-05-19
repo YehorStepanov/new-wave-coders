@@ -4,7 +4,7 @@
   width: 100%;
   background-color: #f2fafa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 998;
 }
 
 .header-container {
@@ -45,15 +45,6 @@
   justify-content: flex-start;
 }
 
-.mobile-menu.is-open {
-  display: flex;
-  transform: translateX(0);
-  max-width: 1336px;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
 .overlay {
   position: fixed;
   top: 0;
@@ -67,7 +58,7 @@
 }
 .overlay.is-open {
   opacity: 1;
-  pointer-events: none;
+  pointer-events: all;
 }
 
 @media (min-width: 300px) {
@@ -537,7 +528,8 @@
   }
 
   .menu-box,
-  .mobile-menu {
+  .mobile-menu,
+  .overlay {
     display: none !important;
   }
 
