@@ -36,32 +36,34 @@
     </nav>
   </div>
   <!-- Modal menu -->
-  <div id="mobileMenu" class="mobile-menu">
-    <div class="mobile-menu-top">
-      <button class="menu-close-btn" aria-label="Close menu">
-        <div class="close-box">
-          <svg class="close-icon" width="12" height="12">
-            <use href="../img/sprite.svg#close-icon"></use>
+  <div class="overlay" id="overlay">
+    <div id="mobileMenu" class="mobile-menu is-open">
+      <div class="mobile-menu-top">
+        <button class="menu-close-btn" aria-label="Close menu">
+          <div class="close-box">
+            <svg class="close-icon" width="12" height="12">
+              <use href="../img/sprite.svg#close-icon"></use>
+            </svg>
+          </div>
+        </button>
+
+        <a href="#index.html" class="logo-mobile">
+          <svg width="84" height="36">
+            <use href="../img/sprite.svg#logo-icon"></use>
           </svg>
-        </div>
-      </button>
+        </a>
 
-      <a href="#index.html" class="logo-mobile">
-        <svg width="84" height="36">
-          <use href="../img/sprite.svg#logo-icon"></use>
-        </svg>
-      </a>
+        <button class="mobile-join-mob">Join</button>
+      </div>
 
-      <button class="mobile-join-mob">Join</button>
+      <ul class="mobile-menu-list">
+        <li><a href="#classes">Yoga Classes</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+      <button class="mobile-join">Join</button>
     </div>
-
-    <ul class="mobile-menu-list">
-      <li><a href="#classes">Yoga Classes</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#contacts">Contacts</a></li>
-    </ul>
-    <button class="mobile-join">Join</button>
   </div>
 </header>
