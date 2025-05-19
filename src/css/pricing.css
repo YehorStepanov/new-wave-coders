@@ -1,0 +1,77 @@
+.price-stn {
+    background: #f8fbfe;
+}
+.aff {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+  margin-bottom: 12px;
+text-align: center;
+}
+
+.pricing-h2 {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 20px;
+}
+.one-session {
+  text-align: center;
+  padding-top: 30px;
+  margin-top: -32px;
+  margin-right: 32px;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.4%;
+  letter-spacing: 0.01em;
+}
+.btn-join {
+  font-family: 'Sarabun', sans-serif;
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+.prise-list {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0em;
+}
+.choose {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 48px;
+}
+.pricing-span {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  .price-stn .container {
+    max-width: 375px;
+    padding: 64px 16px;
+  }
+}
+
+@media screen and (min-width: 1124px) {
+  .price-stn .container {
+    max-width: 1440px;
+    padding: 112px 64px;
+  }
+}
