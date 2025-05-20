@@ -27,4 +27,32 @@ document.addEventListener('DOMContentLoaded', function () {
         closeBtn.addEventListener('click', () => modal.classList.remove('active'));
       }
     });
+});
+  
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Відкриття мобільного меню
+    const menuBtn = document.querySelector('.menu-mobile');
+    const overlay = document.getElementById('overlay');
+    const closeMenuBtn = document.querySelector('.menu-close-btn');
+  
+    if (menuBtn && overlay) {
+      menuBtn.addEventListener('click', () => {
+        overlay.classList.add('is-open');
+      });
+    }
+  
+    if (closeMenuBtn && overlay) {
+      closeMenuBtn.addEventListener('click', () => {
+        overlay.classList.remove('is-open');
+      });
+    }
+  
+    // Закриття при кліку поза меню (по фону)
+    overlay.addEventListener('click', (e) => {
+      // Якщо клік був саме по overlay (а не по вмісту)
+      if (e.target === overlay) {
+        overlay.classList.remove('is-open');
+      }
+    });
   });
