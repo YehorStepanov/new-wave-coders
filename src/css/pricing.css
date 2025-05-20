@@ -208,6 +208,8 @@
     gap: 24px;
   }
   .pricing-list-item{
+    display: flex;
+    flex-direction: column;
     padding: 32px;
   }
   .pricing-h3{
@@ -225,8 +227,7 @@
   .pricing-btn{
     max-width: 357px;
   }
-  .pricing-list-item:nth-child(2) .pricing-inside-list{
-    margin-bottom: 116px;
-
+  .pricing-btn{
+    margin: auto 0 0 0;
   }
 }

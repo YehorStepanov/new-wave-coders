@@ -47,12 +47,20 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.classList.remove('is-open');
       });
     }
-  
-    // Закриття при кліку поза меню (по фону)
     overlay.addEventListener('click', (e) => {
-      // Якщо клік був саме по overlay (а не по вмісту)
       if (e.target === overlay) {
         overlay.classList.remove('is-open');
       }
     });
+});
+  
+document.addEventListener('DOMContentLoaded', function () {
+  const overlay = document.getElementById('overlay');
+  const navLinks = document.querySelectorAll('.nav-link-modal');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      overlay.classList.remove('is-open');
+    });
   });
+});
