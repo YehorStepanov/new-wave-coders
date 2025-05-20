@@ -1,5 +1,5 @@
 /* Скрыть модалки по умолчанию */
-.overlay {
+.overlaymodal {
   display: none;
   position: fixed;
   top: 0;
@@ -10,12 +10,25 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  inset: 0;
 }
-
-.modal-toggle:checked + .overlay {
+.overlaymodal.active {
+  display: flex !important;
+}
+.close-price-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 /* Крестик и фон */
 .backdrop {
   position: absolute;
@@ -37,7 +50,7 @@
 }
 
 /* Окно */
-.modal-window {
+.modal-price-window {
   position: relative;
   background: #dfebeb;
   border-radius: 16px;
@@ -48,52 +61,50 @@
 }
 
 /* Тексты и формы */
-.modal-title,
-.modal-subtitle,
-.modal-price {
+.modal-price-title,
+.modal-price-subtitle,
+.modal-price-price {
   text-align: center;
   font-family: 'Cabin', sans-serif;
   margin-bottom: 10px;
 }
 
-.modal-title {
+.modal-price-title {
   font-size: 36px;
 }
 
-.modal-subtitle {
+.modal-price-subtitle {
   font-size: 22px;
 }
 
-.modal-price {
+.modal-price-price {
   font-size: 36px;
   margin-bottom: 30px;
 }
 
-.modal-form {
+.modal-price-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
-.input-row {
+.input-price-row {
   display: flex;
-  gap: 20px;
 }
 
-.input-column {
+.input-price-column {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.input {
+.input-price {
   padding: 12px 14px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
 
-.submit-button {
+.submit-price-button {
   background: #c2d9fc;
   border-radius: 100px;
   padding: 10px 24px;
@@ -102,95 +113,219 @@
   font-size: 16px;
   border: none;
   cursor: pointer;
-  font-family: "Sarabun", sans-serif;
+  font-family: 'Sarabun', sans-serif;
 }
-.submit-button:hover,
-.submit-button:focus {
+.submit-price-button:hover,
+.submit-price-button:focus {
   background: rgba(13, 11, 10, 0.05);
 }
 
 /* Адаптация */
 @media (max-width: 767px) {
-  .modal-window {
-    padding: 32px 16px;
+  .modal-price-window {
+    padding: 64px 16px 112px 16px;
+    max-width: 375px;
     width: 100%;
     height: auto;
   }
 
-  .input-row {
+  .input-price-row {
     flex-direction: column;
   }
- 
-}
-@media (min-width: 768px) {
-  .submit-button {
-    width: 155px;
-    height: 46px;
-    margin: 0 auto;
-    display: block;
-    
+  .modal-price-title {
+    margin-bottom: 32px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #0d0b0a;
   }
-
-  .input-row {
-    flex-direction: column;
+  .modal-price-subtitle {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #0d0b0a;
+    margin-bottom: 8px;
   }
-
+  .modal-price-price {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #0d0b0a;
+    margin-bottom: 32px;
+  }
+  .form-price-label {
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #0d0b0a;
+    margin-bottom: 8px;
+  }
+  .input-price {
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(13, 11, 10, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 12px;
+    padding: 8px 12px;
+    width: 100%;
+    max-width: 343px;
+    height: 42px;
+    background: rgba(13, 11, 10, 0.05);
+    margin-bottom: 24px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1335px) {
-  .modal-window {
-    max-width: 600px;
+  .modal-price-window {
+    max-width: 704px;
+    padding: 64px 92px;
   }
-}
+  .close-price-btn {
+    display: none;
+  }
+  .modal-price-title {
+    margin-bottom: 24px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #0d0b0a;
+  }
 
-@media (min-width: 1336px) {
-  .modal-window {
-    max-width: 768px;
+  .modal-price-subtitle {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #0d0b0a;
+    margin-bottom: 8px;
   }
-}
-@media (min-width: 1336px) {
-    .submit-button {
-      width: 155px;
-      height: 46px;
+
+  .modal-price-price {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #0d0b0a;
+    margin-bottom: 24px;
+  }
+  .form-price-label {
+    margin-bottom: 8px;
+  }
+    .input-price {
+      font-family: 'Sarabun', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(13, 11, 10, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0);
+      border-radius: 12px;
+      padding: 8px 12px;
+      width: 100%;
+      max-width: 520px;
+      height: 42px;
+      background: rgba(13, 11, 10, 0.05);
+      margin-bottom: 24px;
+    }
+    .input-price-column.emaildiv{
+      margin-right: 24px;
+    }
+    .submit-price-button{
+      max-width: 155px;
       margin: 0 auto;
-      display: block;
     }
 }
-/* Модалки показываются, если чекбокс включён */
-#modal-1:checked ~ .modal-1,
-#modal-2:checked ~ .modal-2,
-#modal-3:checked ~ .modal-3 {
-  display: flex;
-}
 
-/* Базовая стилизация для модальных окон */
-.overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+@media (min-width: 1336px) {
+  .modal-price-window {
+      max-width: 768px;
+      padding: 64px 64px;
+    }
+  
+    .close-price-btn {
+    }
+  
+    .modal-price-title {
+      margin-bottom: 24px;
+      font-family: 'Cabin', sans-serif;
+      font-weight: 400;
+      font-size: 52px;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      text-align: center;
+      color: #0d0b0a;
+    }
+  
+    .modal-price-subtitle {
+      font-family: 'Cabin', sans-serif;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 1.4;
+      letter-spacing: 0.01em;
+      text-align: center;
+      color: #0d0b0a;
+      margin-bottom: 8px;
+    }
+  
+    .modal-price-price {
+      font-family: 'Cabin', sans-serif;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      text-align: center;
+      color: #0d0b0a;
+      margin-bottom: 24px;
+    }
+  
+    .form-price-label {
+      margin-bottom: 8px;
+    }
+  
+    .input-price {
+      font-family: 'Sarabun', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(13, 11, 10, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0);
+      border-radius: 12px;
+      padding: 8px 12px;
+      width: 100%;
+      height: 42px;
+      background: rgba(13, 11, 10, 0.05);
+      margin-bottom: 24px;
+    }
+  
+    .input-price-column.emaildiv {
+      margin-right: 24px;
+    }
+  
+    .submit-price-button {
+      max-width: 155px;
+      margin: 0 auto;
+    }
 }
-
 .backdrop {
   position: absolute;
   inset: 0;
   cursor: pointer;
-}
-
-.close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

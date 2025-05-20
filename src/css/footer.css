@@ -8,6 +8,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
+  max-width: 343px;
   gap: 48px;
   border: 0px solid rgba(13, 11, 10, 0.15);
   border-radius: 16px;
@@ -63,6 +64,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
+  background: rgba(13, 11, 10, 0.05);
   color: #0d0b0a;
   cursor: pointer;
 }
@@ -148,6 +150,7 @@
   }
 
   .footer-container {
+    max-width: 704px;
     gap: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -212,6 +215,7 @@
     justify-content: space-between;
     padding: 48px;
     column-gap: 128px;
+    max-width: 1312px;
     row-gap: 24px;
   }
 
