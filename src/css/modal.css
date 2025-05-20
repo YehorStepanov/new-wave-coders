@@ -1,5 +1,5 @@
 /* Скрыть модалки по умолчанию */
-.overlay {
+.overlaymodal {
   display: none;
   position: fixed;
   top: 0;
@@ -10,10 +10,10 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  inset: 0;
 }
-
-.modal-toggle:checked + .overlay {
-  display: flex;
+.overlaymodal.active {
+  display: flex !important;
 }
 
 /* Крестик и фон */
@@ -37,7 +37,7 @@
 }
 
 /* Окно */
-.modal-window {
+.modal-price-window {
   position: relative;
   background: #dfebeb;
   border-radius: 16px;
@@ -48,52 +48,52 @@
 }
 
 /* Тексты и формы */
-.modal-title,
-.modal-subtitle,
-.modal-price {
+.modal-price-title,
+.modal-price-subtitle,
+.modal-price-price {
   text-align: center;
   font-family: 'Cabin', sans-serif;
   margin-bottom: 10px;
 }
 
-.modal-title {
+.modal-price-title {
   font-size: 36px;
 }
 
-.modal-subtitle {
+.modal-price-subtitle {
   font-size: 22px;
 }
 
-.modal-price {
+.modal-price-price {
   font-size: 36px;
   margin-bottom: 30px;
 }
 
-.modal-form {
+.modal-price-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.input-row {
+.input-price-row {
   display: flex;
   gap: 20px;
 }
 
-.input-column {
+.input-price-column {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.input {
+.input-price {
   padding: 12px 14px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
 
-.submit-button {
+.submit-price-button {
   background: #c2d9fc;
   border-radius: 100px;
   padding: 10px 24px;
@@ -104,26 +104,26 @@
   cursor: pointer;
   font-family: "Sarabun", sans-serif;
 }
-.submit-button:hover,
-.submit-button:focus {
+.submit-price-button:hover,
+.submit-price-button:focus {
   background: rgba(13, 11, 10, 0.05);
 }
 
 /* Адаптация */
 @media (max-width: 767px) {
-  .modal-window {
+  .modal-price-window {
     padding: 32px 16px;
     width: 100%;
     height: auto;
   }
 
-  .input-row {
+  .input-price-row {
     flex-direction: column;
   }
  
 }
 @media (min-width: 768px) {
-  .submit-button {
+  .submit-price-button {
     width: 155px;
     height: 46px;
     margin: 0 auto;
@@ -131,56 +131,38 @@
     
   }
 
-  .input-row {
+  .input-price-row {
     flex-direction: column;
   }
 
 }
 
 @media (min-width: 768px) and (max-width: 1335px) {
-  .modal-window {
+  .modal-price-window {
     max-width: 600px;
   }
 }
 
 @media (min-width: 1336px) {
-  .modal-window {
+  .modal-price-window {
     max-width: 768px;
   }
 }
 @media (min-width: 1336px) {
-    .submit-button {
+    .submit-price-button {
       width: 155px;
       height: 46px;
       margin: 0 auto;
       display: block;
     }
 }
-/* Модалки показываются, если чекбокс включён */
-#modal-1:checked ~ .modal-1,
-#modal-2:checked ~ .modal-2,
-#modal-3:checked ~ .modal-3 {
-  display: flex;
-}
-
-/* Базовая стилизация для модальных окон */
-.overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
 .backdrop {
   position: absolute;
   inset: 0;
   cursor: pointer;
 }
 
-.close-btn {
+.close-price-btn {
   position: absolute;
   top: 16px;
   right: 16px;
