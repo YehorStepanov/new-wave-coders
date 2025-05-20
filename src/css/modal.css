@@ -15,7 +15,20 @@
 .overlaymodal.active {
   display: flex !important;
 }
-
+.close-price-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* Крестик и фон */
 .backdrop {
   position: absolute;
@@ -72,12 +85,10 @@
 .modal-price-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .input-price-row {
   display: flex;
-  gap: 20px;
 }
 
 .input-price-column {
@@ -102,7 +113,7 @@
   font-size: 16px;
   border: none;
   cursor: pointer;
-  font-family: "Sarabun", sans-serif;
+  font-family: 'Sarabun', sans-serif;
 }
 .submit-price-button:hover,
 .submit-price-button:focus {
@@ -112,7 +123,8 @@
 /* Адаптация */
 @media (max-width: 767px) {
   .modal-price-window {
-    padding: 32px 16px;
+    padding: 64px 16px 112px 16px;
+    max-width: 375px;
     width: 100%;
     height: auto;
   }
@@ -120,59 +132,200 @@
   .input-price-row {
     flex-direction: column;
   }
- 
-}
-@media (min-width: 768px) {
-  .submit-price-button {
-    width: 155px;
-    height: 46px;
-    margin: 0 auto;
-    display: block;
-    
+  .modal-price-title {
+    margin-bottom: 32px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #0d0b0a;
   }
-
-  .input-price-row {
-    flex-direction: column;
+  .modal-price-subtitle {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #0d0b0a;
+    margin-bottom: 8px;
   }
-
+  .modal-price-price {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #0d0b0a;
+    margin-bottom: 32px;
+  }
+  .form-price-label {
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #0d0b0a;
+    margin-bottom: 8px;
+  }
+  .input-price {
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(13, 11, 10, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 12px;
+    padding: 8px 12px;
+    width: 100%;
+    max-width: 343px;
+    height: 42px;
+    background: rgba(13, 11, 10, 0.05);
+    margin-bottom: 24px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1335px) {
   .modal-price-window {
-    max-width: 600px;
+    max-width: 704px;
+    padding: 64px 92px;
   }
+  .close-price-btn {
+    display: none;
+  }
+  .modal-price-title {
+    margin-bottom: 24px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #0d0b0a;
+  }
+
+  .modal-price-subtitle {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #0d0b0a;
+    margin-bottom: 8px;
+  }
+
+  .modal-price-price {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #0d0b0a;
+    margin-bottom: 24px;
+  }
+  .form-price-label {
+    margin-bottom: 8px;
+  }
+    .input-price {
+      font-family: 'Sarabun', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(13, 11, 10, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0);
+      border-radius: 12px;
+      padding: 8px 12px;
+      width: 100%;
+      max-width: 520px;
+      height: 42px;
+      background: rgba(13, 11, 10, 0.05);
+      margin-bottom: 24px;
+    }
+    .input-price-column.emaildiv{
+      margin-right: 24px;
+    }
+    .submit-price-button{
+      max-width: 155px;
+      margin: 0 auto;
+    }
 }
 
 @media (min-width: 1336px) {
   .modal-price-window {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1336px) {
+      max-width: 768px;
+      padding: 64px 64px;
+    }
+  
+    .close-price-btn {
+    }
+  
+    .modal-price-title {
+      margin-bottom: 24px;
+      font-family: 'Cabin', sans-serif;
+      font-weight: 400;
+      font-size: 52px;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      text-align: center;
+      color: #0d0b0a;
+    }
+  
+    .modal-price-subtitle {
+      font-family: 'Cabin', sans-serif;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 1.4;
+      letter-spacing: 0.01em;
+      text-align: center;
+      color: #0d0b0a;
+      margin-bottom: 8px;
+    }
+  
+    .modal-price-price {
+      font-family: 'Cabin', sans-serif;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      text-align: center;
+      color: #0d0b0a;
+      margin-bottom: 24px;
+    }
+  
+    .form-price-label {
+      margin-bottom: 8px;
+    }
+  
+    .input-price {
+      font-family: 'Sarabun', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(13, 11, 10, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0);
+      border-radius: 12px;
+      padding: 8px 12px;
+      width: 100%;
+      height: 42px;
+      background: rgba(13, 11, 10, 0.05);
+      margin-bottom: 24px;
+    }
+  
+    .input-price-column.emaildiv {
+      margin-right: 24px;
+    }
+  
     .submit-price-button {
-      width: 155px;
-      height: 46px;
+      max-width: 155px;
       margin: 0 auto;
-      display: block;
     }
 }
 .backdrop {
   position: absolute;
   inset: 0;
   cursor: pointer;
-}
-
-.close-price-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
