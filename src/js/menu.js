@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
   
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Відкриття мобільного меню
     const menuBtn = document.querySelector('.menu-mobile');
     const overlay = document.getElementById('overlay');
     const closeMenuBtn = document.querySelector('.menu-close-btn');

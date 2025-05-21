@@ -29,7 +29,6 @@
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .mobile-menu {
   display: none;
   position: fixed;
@@ -153,6 +152,17 @@
     box-shadow: 0 2px 6px transparent;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
   }
   .close-icon {
     width: 12px;
@@ -212,12 +222,12 @@
     border: none;
     border-radius: 100vh;
     background-color: #c2d9fc;
-    font-family: "Sarabun", sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.6;
-      text-align: center;
-      color: #0d0b0a;
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    color: #0d0b0a;
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
@@ -243,17 +253,7 @@
   }
 
   .menu-close-btn {
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    z-index: 2;
+      z-index: 3;
   }
 
   .mobile-join-mob {
@@ -265,12 +265,12 @@
     padding: 8px 20px;
     border: none;
     border-radius: 999px;
-    font-family: "Sarabun", sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      text-align: center;
-      line-height: 1.6;
-      color: #0d0b0a;
+    font-family: 'Sarabun', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.6;
+    color: #0d0b0a;
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
@@ -364,14 +364,22 @@
     content: '  Now';
     margin-left: 3px;
   }
-
-  .menu-close-btn {
+.close-box{
+  position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
     background: none;
     border: none;
-    position: absolute;
-    top: 16px;
-    right: 16px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
     cursor: pointer;
+    z-index: 2;
+
+}
+  .menu-close-btn {
+    z-index: 3;
   }
 
   .close-box {
@@ -456,21 +464,6 @@
     justify-content: center;
     border-bottom: 1px solid transparent;
     margin-bottom: 28px;
-  }
-
-  .menu-close-btn {
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-
-    cursor: pointer;
-    z-index: 2;
   }
 
   .mobile-join-mob {
