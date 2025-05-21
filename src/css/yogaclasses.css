@@ -1,5 +1,6 @@
 .yoga-classes-section {
   background-color: #dfebeb;
+  padding: 64px 0;
 }
 .yoga-classes-link:hover,
 .yoga-classes-link:focus {
@@ -10,7 +11,7 @@
 .yoga-classes {
   display: flex;
   flex-direction: column;
-  padding: 64px 16px;
+  padding: 0 16px;
 }
 .yoga-classes-list:hover .yoga-classes-img {
   transform: scale(1.02);
@@ -46,15 +47,6 @@
   color: #0d0b0a;
   padding-bottom: 48px;
   font-family: 'Sarabun', sans-serif;
-}
-
-.yoga-classes-ul {
-}
-
-.yoga-classes-list {
-}
-
-.yoga-classes-picture {
 }
 
 .yoga-classes-img {
@@ -110,11 +102,15 @@
 }
 
 @media screen and (min-width: 768px) {
+  .yoga-classes-section{
+    background-color: #f2fafa;
+    padding: 40px 0;
+  }
   .explore-text {
     padding-bottom: 16px;
   }
   .yoga-classes {
-    padding: 40px 32px;
+    padding: 0 32px;
   }
   .yoga-classes-title {
     padding-bottom: 24px;
@@ -174,21 +170,21 @@
     margin-left: 3px;
   }
 
-  .yoga-classes-section {
-    background-color: #f2fafa;
-  }
-
   .span-desk {
     display: none;
   }
 }
 
 @media only screen and (min-width: 1336px) {
+  .yoga-classes-section {
+      padding: 112px 0;
+    }
   .explore-text {
     padding-bottom: 16px;
   }
+
   .yoga-classes {
-    padding: 112px 64px;
+    padding: 0 64px;
   }
   .yoga-classes-title {
     margin: 0 auto;
@@ -230,11 +226,6 @@
   .yoga-classes-img {
     padding-bottom: 32px;
   }
-
-  .yoga-classes {
-    padding-bottom: 112px;
-  }
-
   .span-desk {
     display: none;
   }
